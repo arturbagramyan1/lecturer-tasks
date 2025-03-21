@@ -132,4 +132,4 @@ users.unshift(user5);
 // console.log(usersWithBlueEyes)
 // console.log(richestUser)
 // console.log(companyNames)
-console.log(users)
+//console.log(users) updated with user5
