@@ -47,24 +47,15 @@ console.log(productWith7);
 
 
 let groupedProducers = products.reduce((acc, product) => {
-    let producerKey = `${product.producer}`;
 
-    acc[producerKey] ??= [];
-    acc[producerKey].push(product);
+    acc[product.producer] ??= [];
+    acc[product.producer].push(product);
 
     return acc;
 }, {});
 
-let formattedOutput = {};
-
-Object.entries(groupedProducers).forEach(([producer, items]) => {
-    formattedOutput[producer] = {};
-    items.forEach((item, index) => {
-        formattedOutput[producer][index] = item;
-    });
-});
 
 
-console.log(formattedOutput);
+console.log(groupedProducers);
 
 
